@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1728" y="98"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="Y6p-8N-IJc">
             <objects>
-                <viewController id="ea5-eb-qln" sceneMemberID="viewController">
+                <viewController id="ea5-eb-qln" customClass="DetailsViewController" customModule="BYOA_musicPlayerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9R-kx-z2o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
