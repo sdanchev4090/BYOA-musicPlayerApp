@@ -42,6 +42,8 @@ class PlayerViewController: UIViewController {
         label.numberOfLines = 0 // line wrap
         return label
     }()
+    let playPauseButton = UIButton()
+
     
     
     override func viewDidLoad() {
@@ -126,21 +128,20 @@ class PlayerViewController: UIViewController {
         holder.addSubview(albumNameLabel)
         
         // Player Controlls
-        let playPauseButton = UIButton()
         let nextButton = UIButton()
         let backButton = UIButton()
         
         // Frame
         let yPosition = artistNameLabel.frame.origin.y + 70 + 100
         let buttonSize: CGFloat = 70
-        let holderWidth: CGFloat = holder.frame.size.width
+//        let holderWidth: CGFloat = holder.frame.size.width
         
-        playPauseButton.frame = CGRect(x: (holderWidth - buttonSize) / 2.0,
+        playPauseButton.frame = CGRect(x: (holder.frame.size.width - buttonSize) / 2.0,
                                        y: yPosition,
                                        width: buttonSize,
                                        height: buttonSize)
                 
-        playPauseButton.frame = CGRect(x: holderWidth - buttonSize - 20,
+        playPauseButton.frame = CGRect(x: holder.frame.size.width - buttonSize - 20,
                                        y: yPosition,
                                        width: buttonSize,
                                        height: buttonSize)
@@ -175,13 +176,38 @@ class PlayerViewController: UIViewController {
     }
     
     @objc func didTapPlayPauseButton() {
-        
+        if player?.isPlaying == true {
+            // pause
+            player?.pause()
+            playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+
+        }
+        else {
+            // play
+            player?.play()
+            playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+
+        }
     }
     @objc func didTapNextButton() {
-        
+        if position < (songs.count - 1) {
+            position = position + 1
+            player?.stop()
+            for subview in holder.subviews {
+                subview.removeFromSuperview()
+            }
+            configure()
+        }
     }
     @objc func didTapBackButton() {
-        
+        if position > 0 {
+            position = position - 1
+            player?.stop()
+            for subview in holder.subviews {
+                subview.removeFromSuperview()
+            }
+            configure()
+        }
     }
     
     
