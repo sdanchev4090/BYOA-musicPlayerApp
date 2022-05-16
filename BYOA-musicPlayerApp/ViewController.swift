@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-
     @IBOutlet var table: UITableView!
     
     var songs = [Song]()
@@ -41,21 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           imageName: "cover3",
                           trackName: "song3"))
         
-        songs.append(Song(name: "Never Gonna Give You Up",
-                          albumName: "Whenever You Need Somebody",
-                          artistName: "Rick Astley",
-                          imageName: "cover1",
-                          trackName: "song1"))
-        songs.append(Song(name: "The Dance",
-                          albumName: "The Greatest Garth Brooks Tribute",
-                          artistName: "Garth Brooks",
-                          imageName: "cover2",
-                          trackName: "song2"))
-        songs.append(Song(name: "The Motto",
-                          albumName: "The Motto",
-                          artistName: "Tiësto, Ava Max",
-                          imageName: "cover3",
-                          trackName: "song3"))
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,8 +56,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: song.imageName)
         
+        cell.imageView?.layer.cornerRadius = 10
+        cell.imageView?.clipsToBounds = true
+        
         cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)
-        cell.detailTextLabel?.font = UIFont(name: "Helvetica", size: 17)
+        cell.detailTextLabel?.font = UIFont(name: "Helvetica", size: 15)
 
         
         return cell

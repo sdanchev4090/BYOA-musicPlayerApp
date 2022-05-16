@@ -96,60 +96,66 @@ class PlayerViewController: UIViewController {
         // set up user interface elements
         
         // album cover
-        albumImageView.frame = CGRect(x: 10,
-                                      y: 10,
-                                      width: holder.frame.size.width-20,
-                                      height: holder.frame.size.width-20)
+        albumImageView.frame = CGRect(x: 30,
+                                      y: 30,
+                                      width: holder.frame.size.width-60,
+                                      height: holder.frame.size.width-60)
         albumImageView.image = UIImage(named: song.imageName)
+        albumImageView.layer.cornerRadius = 25
+        albumImageView.clipsToBounds = true
         holder.addSubview(albumImageView)
         
-        // Labels: Song name, album, artist
+        // Labels: Song name, Artist, Album
         songNameLabel.frame = CGRect(x: 10,
-                                     y: albumImageView.frame.size.height+10,
+                                     y: albumImageView.frame.size.height+65,
                                      width: holder.frame.size.width-20,
-                                     height: 70)
+                                     height: 50)
         
         artistNameLabel.frame = CGRect(x: 10,
-                                       y: albumImageView.frame.size.height+10+70,
+                                       y: albumImageView.frame.size.height+40+65,
                                        width: holder.frame.size.width-20,
-                                       height: 70)
+                                       height: 50)
         
-        albumNameLabel.frame = CGRect(x: 10,
-                                      y: albumImageView.frame.size.height+10+140,
-                                      width: holder.frame.size.width-20,
-                                      height: 70)
+//        albumNameLabel.frame = CGRect(x: 10,
+//                                      y: albumImageView.frame.size.height+40+100,
+//                                      width: holder.frame.size.width-20,
+//                                      height: 50)
         
         songNameLabel.text = song.name
         artistNameLabel.text = song.artistName
-        albumNameLabel.text = song.albumName
+//        albumNameLabel.text = song.albumName
+        
+        songNameLabel.font = UIFont(name: "Helvetica-Bold", size: 25)
+        artistNameLabel.font = UIFont(name: "Helvetica", size: 20)
+//        albumNameLabel.font = UIFont(name: "Helvetica", size: 20)
         
         holder.addSubview(songNameLabel)
         holder.addSubview(artistNameLabel)
-        holder.addSubview(albumNameLabel)
+//        holder.addSubview(albumNameLabel)
         
         // Player Controlls
         let nextButton = UIButton()
         let backButton = UIButton()
         
         // Frame
-        let yPosition = artistNameLabel.frame.origin.y + 70 + 100
-        let buttonSize: CGFloat = 70
-//        let holderWidth: CGFloat = holder.frame.size.width
+        let yPosition = artistNameLabel.frame.origin.y + 70 + 150
+        let buttonSizePP: CGFloat = 90
+        let buttonSizeNB: CGFloat = 40
         
-        playPauseButton.frame = CGRect(x: (holder.frame.size.width - buttonSize) / 2.0,
-                                       y: yPosition,
-                                       width: buttonSize,
-                                       height: buttonSize)
+        playPauseButton.frame = CGRect(x: (holder.frame.size.width - buttonSizePP) / 2.0,
+                                       y: yPosition - ((buttonSizePP - buttonSizeNB) / 2.0),
+                                       width: buttonSizePP,
+                                       height: buttonSizePP)
                 
-        playPauseButton.frame = CGRect(x: holder.frame.size.width - buttonSize - 20,
-                                       y: yPosition,
-                                       width: buttonSize,
-                                       height: buttonSize)
+        nextButton.frame = CGRect(x: holder.frame.size.width - (buttonSizeNB * 1.25) - 75,
+                                  y: yPosition,
+                                  width: buttonSizeNB * 1.25,
+                                  height: buttonSizeNB)
         
-        playPauseButton.frame = CGRect(x: 20,
-                                       y: yPosition,
-                                       width: buttonSize,
-                                       height: buttonSize)
+        backButton.frame = CGRect(x: 75,
+                                  y: yPosition,
+                                  width: buttonSizeNB * 1.25,
+                                  height: buttonSizeNB)
         
         // Add Actions
         playPauseButton.addTarget(self, action: #selector(didTapPlayPauseButton), for: .touchUpInside)
@@ -157,10 +163,10 @@ class PlayerViewController: UIViewController {
         backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         
         // Styling
-        playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+        playPauseButton.setBackgroundImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
         nextButton.setBackgroundImage(UIImage(systemName: "forward.fill"), for: .normal)
         backButton.setBackgroundImage(UIImage(systemName: "backward.fill"), for: .normal)
-
+        
         playPauseButton.tintColor = .black
         nextButton.tintColor = .black
         backButton.tintColor = .black
@@ -170,7 +176,7 @@ class PlayerViewController: UIViewController {
         holder.addSubview(nextButton)
         holder.addSubview(backButton)
         
-        // Slider
+        // Progress Bar
         
         
     }
@@ -179,27 +185,27 @@ class PlayerViewController: UIViewController {
         if player?.isPlaying == true {
             // pause
             player?.pause()
-            playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+            playPauseButton.setBackgroundImage(UIImage(systemName: "play.circle.fill"), for: .normal)
 
             // shrink image
             UIView.animate(withDuration: 0.2, animations: {
-                self.albumImageView.frame = CGRect(x: 30,
-                                                   y: 30,
-                                                   width: self.holder.frame.size.width-60,
-                                                   height: self.holder.frame.size.width-60)
+                self.albumImageView.frame = CGRect(x: 45,
+                                                   y: 45,
+                                                   width: self.holder.frame.size.width-90,
+                                                   height: self.holder.frame.size.width-90)
             })
         }
         else {
             // play
             player?.play()
-            playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+            playPauseButton.setBackgroundImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
 
-            // increase image size
+            // enlarge image
             UIView.animate(withDuration: 0.2, animations: {
-                self.albumImageView.frame = CGRect(x: 10,
-                                                   y: 10,
-                                                   width: self.holder.frame.size.width-20,
-                                                   height: self.holder.frame.size.width-20)
+                self.albumImageView.frame = CGRect(x: 30,
+                                                   y: 30,
+                                                   width: self.holder.frame.size.width-60,
+                                                   height: self.holder.frame.size.width-60)
             })
         }
     }
