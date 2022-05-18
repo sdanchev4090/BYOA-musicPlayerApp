@@ -24,11 +24,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func configureSongs() {
+        songs.append(Song(name: "Blinding Lights",
+                          albumName: "After Hours",
+                          artistName: "The Weeknd",
+                          imageName: "cover7",
+                          trackName: "song7"))
+        songs.append(Song(name: "Happier",
+                          albumName: "Happier",
+                          artistName: "Marshmallow, Bastille",
+                          imageName: "cover4",
+                          trackName: "song4"))
         songs.append(Song(name: "Never Gonna Give You Up",
                           albumName: "Whenever You Need Somebody",
                           artistName: "Rick Astley",
                           imageName: "cover1",
                           trackName: "song1"))
+        songs.append(Song(name: "Off Of My Mind",
+                          albumName: "Off Of My Mind",
+                          artistName: "Icona Pop & VIZE",
+                          imageName: "cover6",
+                          trackName: "song6"))
+        songs.append(Song(name: "Salt",
+                          albumName: "Heaven & Hell",
+                          artistName: "Ava Max",
+                          imageName: "cover8",
+                          trackName: "song8"))
+        songs.append(Song(name: "Sunflower",
+                          albumName: "Sunflower",
+                          artistName: "Post Malone, Swae Lee",
+                          imageName: "cover5",
+                          trackName: "song5"))
         songs.append(Song(name: "The Dance",
                           albumName: "The Greatest Garth Brooks Tribute",
                           artistName: "Garth Brooks",
@@ -39,19 +64,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Tiësto, Ava Max",
                           imageName: "cover3",
                           trackName: "song3"))
-        songs.append(Song(name: "Happier",
-                          albumName: "Happier",
-                          artistName: "Marshmallow, Bastille",
-                          imageName: "cover4",
-                          trackName: "song4"))
-        songs.append(Song(name: "Sunflower",
-                          albumName: "Sunflower",
-                          artistName: "Post Malone, Swae Lee",
-                          imageName: "cover5",
-                          trackName: "song5"))
         
+//        songs.append(Song(name: "",
+//                          albumName: "",
+//                          artistName: "",
+//                          imageName: "",
+//                          trackName: ""))
         
-    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

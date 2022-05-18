@@ -176,7 +176,7 @@ class PlayerViewController: UIViewController {
         holder.addSubview(nextButton)
         holder.addSubview(backButton)
         
-        // Progress Bar
+        // Volume Slider
         
         
     }
@@ -218,10 +218,26 @@ class PlayerViewController: UIViewController {
             }
             configure()
         }
+        else {
+            position = 0
+            player?.stop()
+            for subview in holder.subviews {
+                subview.removeFromSuperview()
+            }
+            configure()
+        }
     }
     @objc func didTapBackButton() {
         if position > 0 {
             position = position - 1
+            player?.stop()
+            for subview in holder.subviews {
+                subview.removeFromSuperview()
+            }
+            configure()
+        }
+        else if position == 0 {
+            position = songs.count - 1
             player?.stop()
             for subview in holder.subviews {
                 subview.removeFromSuperview()
