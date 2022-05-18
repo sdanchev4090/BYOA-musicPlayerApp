@@ -147,14 +147,14 @@ class PlayerViewController: UIViewController {
                                        width: buttonSizePP,
                                        height: buttonSizePP)
                 
-        nextButton.frame = CGRect(x: holder.frame.size.width - (buttonSizeNB * 1.25) - 75,
+        nextButton.frame = CGRect(x: holder.frame.size.width - (buttonSizeNB * 1.5) - 72,
                                   y: yPosition,
-                                  width: buttonSizeNB * 1.25,
+                                  width: buttonSizeNB * 1.5,
                                   height: buttonSizeNB)
         
-        backButton.frame = CGRect(x: 75,
+        backButton.frame = CGRect(x: 72,
                                   y: yPosition,
-                                  width: buttonSizeNB * 1.25,
+                                  width: buttonSizeNB * 1.5,
                                   height: buttonSizeNB)
         
         // Add Actions

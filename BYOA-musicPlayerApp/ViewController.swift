@@ -39,8 +39,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Tiësto, Ava Max",
                           imageName: "cover3",
                           trackName: "song3"))
+        songs.append(Song(name: "Happier",
+                          albumName: "Happier",
+                          artistName: "Marshmallow, Bastille",
+                          imageName: "cover4",
+                          trackName: "song4"))
+        songs.append(Song(name: "Sunflower",
+                          albumName: "Sunflower",
+                          artistName: "Post Malone, Swae Lee",
+                          imageName: "cover5",
+                          trackName: "song5"))
         
         
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let song = songs[indexPath.row]
         // configure
         cell.textLabel?.text = song.name
-        cell.detailTextLabel?.text = song.albumName
+        cell.detailTextLabel?.text = song.artistName
         cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named: song.imageName)
         
