@@ -34,6 +34,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Marshmallow, Bastille",
                           imageName: "cover4",
                           trackName: "song4"))
+        
+        songs.append(Song(name: "Life's Coming in Slow",
+                          albumName: "Gran Turismo 7 OST",
+                          artistName: "Nothing but Thieves",
+                          imageName: "cover9",
+                          trackName: "song9"))
+        
+        
         songs.append(Song(name: "Never Gonna Give You Up",
                           albumName: "Whenever You Need Somebody",
                           artistName: "Rick Astley",
@@ -64,6 +72,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Tiësto, Ava Max",
                           imageName: "cover3",
                           trackName: "song3"))
+        
+       
         
 //        songs.append(Song(name: "",
 //                          albumName: "",

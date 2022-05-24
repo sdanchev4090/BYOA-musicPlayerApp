@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06AE602C283D3457000B760E /* song9 in Resources */ = {isa = PBXBuildFile; fileRef = 06AE602B283D3457000B760E /* song9 */; };
 		5B4C5B3A282D90FD000E8721 /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C5B37282D90FD000E8721 /* song1.mp3 */; };
 		5B4C5B3B282D90FD000E8721 /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C5B38282D90FD000E8721 /* song2.mp3 */; };
 		5B4C5B3C282D90FD000E8721 /* song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C5B39282D90FD000E8721 /* song3.mp3 */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06AE602B283D3457000B760E /* song9 */ = {isa = PBXFileReference; lastKnownFileType = file; path = song9; sourceTree = "<group>"; };
 		5B4C5B37282D90FD000E8721 /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
 		5B4C5B38282D90FD000E8721 /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song2.mp3; sourceTree = "<group>"; };
 		5B4C5B39282D90FD000E8721 /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song3.mp3; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				5B5DE318283597A800D4FA9D /* song6.mp3 */,
 				5B5DE31A2835994900D4FA9D /* song7.mp3 */,
 				5B5DE31C28359BF400D4FA9D /* song8.mp3 */,
+				06AE602B283D3457000B760E /* song9 */,
 				5BFA825D2825AB0B006D14A7 /* AppDelegate.swift */,
 				5BFA825F2825AB0B006D14A7 /* SceneDelegate.swift */,
 				5BFA82612825AB0B006D14A7 /* ViewController.swift */,
@@ -158,6 +161,7 @@
 				5B5DE3172835841200D4FA9D /* song5.mp3 in Resources */,
 				5B5DE319283597A800D4FA9D /* song6.mp3 in Resources */,
 				5BFA826A2825AB0D006D14A7 /* LaunchScreen.storyboard in Resources */,
+				06AE602C283D3457000B760E /* song9 in Resources */,
 				5B5DE31B2835994900D4FA9D /* song7.mp3 in Resources */,
 				5B4C5B3C282D90FD000E8721 /* song3.mp3 in Resources */,
 				5B5DE31528357DC600D4FA9D /* song4.mp3 in Resources */,
