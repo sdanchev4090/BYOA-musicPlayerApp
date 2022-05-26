@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06C91EB9283FC716001906F4 /* song9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06C91EB8283FC716001906F4 /* song9.mp3 */; };
+		06C91EBB283FC823001906F4 /* song10.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06C91EBA283FC823001906F4 /* song10.mp3 */; };
 		5B4C5B3A282D90FD000E8721 /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C5B37282D90FD000E8721 /* song1.mp3 */; };
 		5B4C5B3B282D90FD000E8721 /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C5B38282D90FD000E8721 /* song2.mp3 */; };
 		5B4C5B3C282D90FD000E8721 /* song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C5B39282D90FD000E8721 /* song3.mp3 */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		06C91EB8283FC716001906F4 /* song9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song9.mp3; sourceTree = "<group>"; };
+		06C91EBA283FC823001906F4 /* song10.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song10.mp3; sourceTree = "<group>"; };
 		5B4C5B37282D90FD000E8721 /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
 		5B4C5B38282D90FD000E8721 /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song2.mp3; sourceTree = "<group>"; };
 		5B4C5B39282D90FD000E8721 /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song3.mp3; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				5B5DE31A2835994900D4FA9D /* song7.mp3 */,
 				5B5DE31C28359BF400D4FA9D /* song8.mp3 */,
 				06C91EB8283FC716001906F4 /* song9.mp3 */,
+				06C91EBA283FC823001906F4 /* song10.mp3 */,
 				5BFA825D2825AB0B006D14A7 /* AppDelegate.swift */,
 				5BFA825F2825AB0B006D14A7 /* SceneDelegate.swift */,
 				5BFA82612825AB0B006D14A7 /* ViewController.swift */,
@@ -168,6 +171,7 @@
 				06C91EB9283FC716001906F4 /* song9.mp3 in Resources */,
 				5BFA82652825AB0B006D14A7 /* Main.storyboard in Resources */,
 				5B5DE31D28359BF400D4FA9D /* song8.mp3 in Resources */,
+				06C91EBB283FC823001906F4 /* song10.mp3 in Resources */,
 				5B4C5B3A282D90FD000E8721 /* song1.mp3 in Resources */,
 				5B4C5B3B282D90FD000E8721 /* song2.mp3 in Resources */,
 			);

@@ -57,6 +57,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Ava Max",
                           imageName: "cover8",
                           trackName: "song8"))
+        
+        songs.append(Song(name: "Simple Man",
+                          albumName: "(Pronounced 'Lĕh-'nérd 'Skin-'nérd)",
+                          artistName: "lynyrd skynyrd",
+                          imageName: "cover10",
+                          trackName: "song10"))
+        
         songs.append(Song(name: "Sunflower",
                           albumName: "Sunflower",
                           artistName: "Post Malone, Swae Lee",
