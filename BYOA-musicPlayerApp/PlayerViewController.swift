@@ -49,7 +49,7 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.overrideUserInterfaceStyle = .dark
     }
     
     override func viewDidLayoutSubviews() {
@@ -129,6 +129,9 @@ class PlayerViewController: UIViewController {
         artistNameLabel.font = UIFont(name: "Helvetica", size: 20)
 //        albumNameLabel.font = UIFont(name: "Helvetica", size: 20)
         
+        songNameLabel.textColor = .white
+        artistNameLabel.textColor = .lightGray
+        
         holder.addSubview(songNameLabel)
         holder.addSubview(artistNameLabel)
 //        holder.addSubview(albumNameLabel)
@@ -167,9 +170,9 @@ class PlayerViewController: UIViewController {
         nextButton.setBackgroundImage(UIImage(systemName: "forward.fill"), for: .normal)
         backButton.setBackgroundImage(UIImage(systemName: "backward.fill"), for: .normal)
         
-        playPauseButton.tintColor = .black
-        nextButton.tintColor = .black
-        backButton.tintColor = .black
+        playPauseButton.tintColor = UIColor(named: "AccentColor")
+        nextButton.tintColor = .white
+        backButton.tintColor = .white
 
         
         holder.addSubview(playPauseButton)

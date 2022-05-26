@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.overrideUserInterfaceStyle = .dark
+        
         configureSongs()
         
         table.delegate = self
@@ -34,14 +36,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Marshmallow, Bastille",
                           imageName: "cover4",
                           trackName: "song4"))
-        
         songs.append(Song(name: "Life's Coming in Slow",
                           albumName: "Gran Turismo 7 OST",
                           artistName: "Nothing but Thieves",
                           imageName: "cover9",
                           trackName: "song9"))
-        
-        
         songs.append(Song(name: "Never Gonna Give You Up",
                           albumName: "Whenever You Need Somebody",
                           artistName: "Rick Astley",
@@ -57,13 +56,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                           artistName: "Ava Max",
                           imageName: "cover8",
                           trackName: "song8"))
-        
-        songs.append(Song(name: "Simple Man",
-                          albumName: "(Pronounced 'Lĕh-'nérd 'Skin-'nérd)",
-                          artistName: "lynyrd skynyrd",
-                          imageName: "cover10",
-                          trackName: "song10"))
-        
         songs.append(Song(name: "Sunflower",
                           albumName: "Sunflower",
                           artistName: "Post Malone, Swae Lee",
