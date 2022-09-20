@@ -192,10 +192,10 @@ class PlayerViewController: UIViewController {
 
             // shrink image
             UIView.animate(withDuration: 0.2, animations: {
-                self.albumImageView.frame = CGRect(x: 45,
-                                                   y: 45,
-                                                   width: self.holder.frame.size.width-90,
-                                                   height: self.holder.frame.size.width-90)
+                self.albumImageView.frame = CGRect(x: 90,
+                                                   y: 90,
+                                                   width: self.holder.frame.size.width-180,  // x times 2
+                                                   height: self.holder.frame.size.width-180)  // x times 2
             })
         }
         else {
@@ -207,8 +207,8 @@ class PlayerViewController: UIViewController {
             UIView.animate(withDuration: 0.2, animations: {
                 self.albumImageView.frame = CGRect(x: 30,
                                                    y: 30,
-                                                   width: self.holder.frame.size.width-60,
-                                                   height: self.holder.frame.size.width-60)
+                                                   width: self.holder.frame.size.width-60,  // x times 2
+                                                   height: self.holder.frame.size.width-60)  // x times 2
             })
         }
     }
